@@ -1,0 +1,22 @@
+<template>
+    <div  class="label-class">
+        <h1>{headerLabel}</h1>
+      </div>
+     
+    <div class="slds-m-around_medium">
+     <p>Hello, @Track example {greeting}!</p>
+
+    <lightning-input label="Name" value={greeting} onchange={changeHandler}></lightning-input>
+    </div>
+  <!-- Reactive property which is @track means when we use it, it gets rendered again -->
+    <lightning-card title="@track demo">
+        Hello {greeting}
+    </lightning-card>
+   <!-- When we don't use decorator like @api or @track than component not re-render again -->
+   
+   <lightning-card title="@track demo">
+        Hello {greeting}
+    </lightning-card>
+    <lightning-button label="Click Me" onclick={handleclick}></lightning-button>
+
+</template>
